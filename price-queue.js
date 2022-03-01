@@ -1,6 +1,5 @@
-const { DoublyLinkedList } = require('./linked-list')
 
-class OrderQueue {
+class PriceQueue {
   constructor({price}) {
     this.price = price
     this.volume = 0
@@ -20,11 +19,11 @@ class OrderQueue {
   }
 
   add(order) {
-    this.volume = this.volume + order.quantity
+    this.volume += order.quantity
     this.orders.push(order)
   }
 }
 
 module.exports = {
-  OrderQueue
+  PriceQueue
 }
