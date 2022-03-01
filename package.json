@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "ThankGod Ossaija (Tg) <codebugsolved@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "js-algorithms": "^1.9.1"
+  }
 }
