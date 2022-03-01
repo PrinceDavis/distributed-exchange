@@ -4,6 +4,10 @@
   "main": "index.js",
   "author": "ThankGod Ossaija (Tg) <codebugsolved@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start:server": "node server.js",
+    "start:client": "node client.js"
+  },
   "dependencies": {
     "dotenv": "^16.0.0",
     "grenache-nodejs-link": "^0.7.12",
