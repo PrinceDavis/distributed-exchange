@@ -1,3 +1,4 @@
+'use strict'
 class Order {
   constructor({ timestamp, price, quantity,  symbol, type }) {
     this.timestamp = timestamp;
@@ -18,12 +19,12 @@ class Order {
 }
 
 
-const  OderTypes = {
+const  OrderTypes = {
 MARKET_ODER: 'market_order',
 LIMITE_ORDER: 'limit_order'
 }
 
 module.exports = {
   Order,
-  OderTypes
+  OrderTypes
 }

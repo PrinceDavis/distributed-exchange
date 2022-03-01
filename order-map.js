@@ -1,3 +1,4 @@
+'use strict'
 const RbTree = require('red-black-tree-js')
 const { PriceQueue } = require('./price-queue')
 class OrderMap {

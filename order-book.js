@@ -1,6 +1,6 @@
+'use strict'
 const { Order } = require("./order");
 const { OrderMap } = require("./order-map");
-const { PriceQueue } = require("./price-queue");
 const {}
 
 class OrderBook {
@@ -14,6 +14,10 @@ class OrderBook {
     this.bids.remove(order)
   }
   this.asks.remove(order)
+ }
+
+ processMarketOrder(order) {
+   // to be continued
  }
 
  processLimitOrder(order) {
@@ -36,6 +40,8 @@ class OrderBook {
    if(quantity > 0 && sideToProcess.len > 0 &&  price > bestPrice.price) {
     this.processQueue(orderQueue, quantity)
    }
+
+   // to be continued
  }
 
  processQueue(orderQueue, quantityToTrade) {
@@ -58,4 +64,8 @@ class OrderBook {
     }
   }
  }
+}
+
+module.exports = {
+  OrderBook
 }

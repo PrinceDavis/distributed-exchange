@@ -1,4 +1,4 @@
-
+'use strict'
 class PriceQueue {
   constructor({price}) {
     this.price = price

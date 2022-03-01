@@ -5,6 +5,9 @@
   "author": "ThankGod Ossaija (Tg) <codebugsolved@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.0.0",
+    "grenache-nodejs-link": "^0.7.12",
+    "grenache-nodejs-ws": "^0.7.10",
     "red-black-tree-js": "^1.2.2"
   }
 }
