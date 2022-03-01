@@ -1,5 +1,5 @@
 const { PriceQueue } = require('./price-queue')
-class OrderSide {
+class OrderMap {
   constructor() {
     this.prices = new Map()
     this.volume = 0
@@ -25,8 +25,24 @@ class OrderSide {
     this.volume += quantity
     return priceQueue.add(order)
   }
+
+  remove(order) {
+    const { price } = order;
+    const priceString = price.toString()
+
+    const priceQueue = this.prices.get(priceString)
+    const [deletedEl]  = priceQueue.remove(order)
+
+    if(priceQueue.len() === 0) {
+      this.prices.delete(priceString)
+      this.depth--
+    }
+
+    this.numberOfOrders--
+    this.volume -= deletedEl.quantity
+  }
 }
 
 module.exports = {
-  OrderSide
+  OrderMap
 }

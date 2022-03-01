@@ -22,6 +22,20 @@ class PriceQueue {
     this.volume += order.quantity
     this.orders.push(order)
   }
+
+  update(orderToSub, orderToAdd) {
+    this.volume -= orderToSub.quantity
+    this.volume += orderToAdd.quantity
+  }
+
+  remove(order) {
+    const indexToDelete = this.orders.findIndex(el => el.price === order.price)
+
+    if(indexToUpdate !== -1) {
+      this.volume -= order.quantity
+      return this.orders.splice(indexToDelete, 1)
+    }
+  }
 }
 
 module.exports = {

@@ -1,9 +1,10 @@
 class Order {
-  constructor({ cid, price, quantity,  symbol }) {
+  constructor({ cid, price, quantity,  symbol, type }) {
     this.cid = cid;
     this.price = price
     this.quantity = quantity
     this.symbol = symbol
+    this.type = type
   }
 
   toJson() {
