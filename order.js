@@ -1,6 +1,6 @@
 class Order {
-  constructor({ cid, price, quantity,  symbol, type }) {
-    this.cid = cid;
+  constructor({ timestamp, price, quantity,  symbol, type }) {
+    this.timestamp = timestamp;
     this.price = price
     this.quantity = quantity
     this.symbol = symbol
@@ -9,7 +9,7 @@ class Order {
 
   toJson() {
     return {
-      cid: this.cid,
+      timestamp: this.timestamp,
       price: this.price,
       quantity: this.quantity,
       symbo: this.symbol
@@ -18,7 +18,12 @@ class Order {
 }
 
 
-const  OderType = {
+const  OderTypes = {
 MARKET_ODER: 'market_order',
 LIMITE_ORDER: 'limit_order'
+}
+
+module.exports = {
+  Order,
+  OderTypes
 }

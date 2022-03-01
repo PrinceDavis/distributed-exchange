@@ -5,6 +5,6 @@
   "author": "ThankGod Ossaija (Tg) <codebugsolved@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "js-algorithms": "^1.9.1"
+    "red-black-tree-js": "^1.2.2"
   }
 }
